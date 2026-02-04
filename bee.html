@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For Abi (Pookay Vookay) 💛</title>
+  <meta name="description" content="A bright, cozy page for Abi made by McClapYoHandz." />
+
+  <!-- Bubble-but-polished fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#0B0F1A;
+      --muted: rgba(11,15,26,.68);
+
+      --glass: rgba(255,255,255,.46);
+      --glass2: rgba(255,255,255,.62);
+
+      --shadow: 0 18px 55px rgba(0,0,0,.12);
+      --shadow2: 0 10px 28px rgba(0,0,0,.10);
+
+      --r1: 28px;
+      --r2: 22px;
+
+      --title: "Fredoka", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --body: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+      --pink: rgba(255,107,179,.92);
+      --sun: rgba(255,201,84,.92);
+      --sky: rgba(63,210,255,.62);
+      --lav: rgba(124,92,255,.55);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      font-family: var(--body);
+      color: var(--ink);
+      overflow-x:hidden;
+
+      /* Bright, Abi-coded */
+      background:
+        radial-gradient(1100px 650px at 20% 10%, rgba(255,201,84,.55), transparent 60%),
+        radial-gradient(980px 620px at 80% 18%, rgba(255,107,179,.46), transparent 60%),
+        radial-gradient(900px 620px at 50% 88%, rgba(63,210,255,.40), transparent 60%),
+        linear-gradient(180deg, #FFF7D9, #FFEAF3 40%, #EAF8FF 100%);
+    }
+
+    /* Confetti-ish dots */
+    .doodles{
+      pointer-events:none;
+      position:fixed; inset:0;
+      opacity:.12;
+      background-image:
+        radial-gradient(2px 2px at 12% 24%, rgba(0,0,0,.50) 50%, transparent 52%),
+        radial-gradient(2px 2px at 24% 78%, rgba(0,0,0,.40) 50%, transparent 52%),
+        radial-gradient(2px 2px at 50% 18%, rgba(0,0,0,.40) 50%, transparent 52%),
+        radial-gradient(2px 2px at 68% 62%, rgba(0,0,0,.35) 50%, transparent 52%),
+        radial-gradient(2px 2px at 88% 28%, rgba(0,0,0,.33) 50%, transparent 52%),
+        radial-gradient(2px 2px at 86% 80%, rgba(0,0,0,.28) 50%, transparent 52%);
+      filter: blur(.15px);
+    }
+
+    /* Crossy Road-ish grid (light + happy) */
+    .gridOverlay{
+      pointer-events:none;
+      position:fixed; inset:-10%;
+      background:
+        linear-gradient(rgba(0,0,0,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,.05) 1px, transparent 1px);
+      background-size: 58px 58px;
+      opacity:.16;
+      transform: translateZ(0);
+      animation: drift 18s linear infinite;
+    }
+    @keyframes drift{0%{transform:translate3d(-1%, -1%, 0)}100%{transform:translate3d(1%, 1%, 0)}}
+
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 80px;position:relative;}
+
+    header{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;margin-bottom:18px;}
+    .brand{display:flex;gap:14px;align-items:center;}
+
+    .logo{
+      width:54px;height:54px;border-radius:18px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.92), transparent 45%),
+        linear-gradient(135deg, var(--pink), var(--sun));
+      box-shadow: var(--shadow2);
+      border:1px solid rgba(11,15,26,.08);
+      position:relative;
+    }
+    .logo:after{
+      content:"";position:absolute;inset:11px;border-radius:14px;
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(11,15,26,.10);
+    }
+
+    h1{
+      margin:0;
+      font-family: var(--title);
+      font-weight: 700;
+      font-size: clamp(26px, 3.4vw, 40px);
+      letter-spacing:.15px;
+      line-height:1.05;
+      text-shadow: 0 2px 0 rgba(255,255,255,.65), 0 12px 25px rgba(0,0,0,.08);
+    }
+    .subtitle{
+      margin:8px 0 0;
+      max-width: 78ch;
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.6;
+      font-weight: 700;
+    }
+
+    .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;justify-content:flex-end;}
+    .pill{
+      font-family: var(--title);
+      font-weight: 800;
+      font-size: 12.5px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.45);
+      border: 1px solid rgba(11,15,26,.10);
+      color: rgba(11,15,26,.80);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 18px rgba(0,0,0,.06);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    @media (max-width: 920px){
+      .grid{grid-template-columns: 1fr;}
+      header{flex-direction:column;align-items:flex-start;}
+      .pillrow{justify-content:flex-start;}
+    }
+
+    /* Glass cards */
+    .card{
+      position:relative;
+      border-radius: var(--r1);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(11,15,26,.10);
+      background: linear-gradient(180deg, var(--glass2), var(--glass));
+      backdrop-filter: blur(14px);
+    }
+    .card:before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(700px 280px at 20% 15%, rgba(255,107,179,.16), transparent 60%),
+        radial-gradient(700px 280px at 80% 20%, rgba(255,201,84,.18), transparent 60%),
+        radial-gradient(700px 300px at 50% 90%, rgba(63,210,255,.14), transparent 60%);
+      opacity:.95;
+      pointer-events:none;
+    }
+    .card:after{
+      content:"";
+      position:absolute; inset:0;
+      border-radius: var(--r1);
+      padding:1.5px;
+      background: linear-gradient(135deg, rgba(255,107,179,.48), rgba(255,201,84,.42), rgba(63,210,255,.38), rgba(124,92,255,.32));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events:none;
+      opacity:.85;
+    }
+
+    .inner{position:relative;padding:18px 18px 16px;}
+
+    h2{
+      margin:0 0 8px;
+      font-family: var(--title);
+      font-size: 18px;
+      letter-spacing:.2px;
+    }
+    h3{
+      margin:0 0 8px;
+      font-family: var(--title);
+      font-size: 15.8px;
+      letter-spacing:.15px;
+    }
+
+    .desc{
+      margin:8px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 700;
+    }
+
+    .divider{height:1px;background:rgba(11,15,26,.10);margin:14px 0;}
+
+    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+    button{
+      cursor:pointer;
+      border:1px solid rgba(11,15,26,.12);
+      color: rgba(11,15,26,.92);
+      background: rgba(255,255,255,.58);
+      padding:10px 12px;
+      border-radius: 999px;
+      font-weight: 900;
+      letter-spacing:.15px;
+      font-family: var(--title);
+      transition: transform .08s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease;
+      user-select:none;
+      box-shadow: 0 10px 20px rgba(0,0,0,.08);
+    }
+    button:hover{background: rgba(255,255,255,.82); border-color: rgba(11,15,26,.18); box-shadow: 0 12px 24px rgba(0,0,0,.10);}
+    button:active{transform:translateY(1px) scale(.99);}
+    .primary{
+      background: linear-gradient(135deg, rgba(255,107,179,.95), rgba(255,201,84,.92));
+      border-color: rgba(11,15,26,.10);
+    }
+
+    .quoteBox{
+      padding:14px;
+      border-radius: var(--r2);
+      background: rgba(255,255,255,.58);
+      border:1px solid rgba(11,15,26,.10);
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    }
+    .quoteText{
+      font-family: var(--title);
+      font-size: 16.2px;
+      color: rgba(11,15,26,.96);
+      line-height: 1.35;
+    }
+    .quoteMeta{
+      margin-top:8px;
+      font-size:12.5px;
+      color: rgba(11,15,26,.62);
+      font-weight: 900;
+      font-family: var(--title);
+    }
+
+    .miniGrid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px;}
+    .mini{
+      padding:14px;
+      border-radius: var(--r2);
+      background: rgba(255,255,255,.52);
+      border:1px solid rgba(11,15,26,.10);
+      box-shadow: 0 10px 24px rgba(0,0,0,.07);
+    }
+
+    .out{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 13.5px;
+      color: rgba(11,15,26,.86);
+      background: rgba(255,255,255,.60);
+      border: 1px solid rgba(11,15,26,.10);
+      padding: 10px;
+      border-radius: 16px;
+      min-height: 46px;
+      white-space: pre-wrap;
+    }
+
+    .progressWrap{display:flex;align-items:center;gap:10px;margin-top:10px;}
+    .bar{
+      flex:1;height:12px;border-radius:999px;
+      background:rgba(11,15,26,.08);
+      border:1px solid rgba(11,15,26,.10);
+      overflow:hidden;
+    }
+    .fill{height:100%;width:42%;background: linear-gradient(90deg, rgba(124,92,255,.85), rgba(63,210,255,.85));}
+    .tag{
+      font-size:12px;padding:4px 10px;border-radius:999px;
+      border:1px solid rgba(11,15,26,.10);
+      background: rgba(255,255,255,.58);
+      color: rgba(11,15,26,.78);
+      white-space:nowrap;
+      font-weight: 900;
+      font-family: var(--title);
+    }
+
+    footer{
+      margin-top:18px;
+      color:rgba(11,15,26,.55);
+      font-size:12.5px;
+      text-align:center;
+      font-weight: 800;
+    }
+    .tiny{font-size:12.5px;color:rgba(11,15,26,.58);font-weight: 800;}
+
+  </style>
+</head>
+
+<body>
+  <div class="doodles" aria-hidden="true"></div>
+  <div class="gridOverlay" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Hi Abi — aka Pookay Vookay 💛</h1>
+          <p class="subtitle">
+            I made this because you’re funny, smart, and genuinely really empathetic.
+            Also because your vibe is bright — so your page should be bright too.
+          </p>
+        </div>
+      </div>
+
+      <div class="pillrow">
+        <div class="pill" id="todayPill">Loading…</div>
+        <div class="pill" id="timePill">Loading…</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- LEFT -->
+      <section class="card">
+        <div class="inner">
+          <h2>Press a button if the day is annoying</h2>
+          <p class="desc">No cringe. Just quick comfort + sibling energy.</p>
+
+          <div class="quoteBox" role="status" aria-live="polite">
+            <div class="quoteText" id="quoteText">Tap “McClapYoHandz says…”</div>
+            <div class="quoteMeta" id="quoteMeta"></div>
+          </div>
+
+          <div class="btnrow">
+            <button class="primary" id="btnBoost">McClapYoHandz says…</button>
+            <button id="btnHype">Hype me up</button>
+            <button id="btnPsych">Psych moment</button>
+            <button id="btnCozy">Cozy mode</button>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="miniGrid">
+            <div class="mini">
+              <h3>🐥 Crossy Road duel energy</h3>
+              <div class="out" id="crossyOut">Tap for a challenge prompt.</div>
+              <div class="btnrow">
+                <button id="btnCrossy">Give me a challenge</button>
+                <button id="btnRematch">REMATCH</button>
+              </div>
+              <div class="tiny" style="margin-top:8px;">(I’m still better, but I’m respectful about it.)</div>
+            </div>
+
+            <div class="mini">
+              <h3>🎮 Nintendo Switch: what should I play?</h3>
+              <div class="out" id="switchOut">Tap for an actual game suggestion.</div>
+              <div class="btnrow">
+                <button id="btnSwitch">Suggest a game</button>
+                <button id="btnAC">Animal Crossing nostalgia</button>
+              </div>
+            </div>
+
+            <div class="mini">
+              <h3>🐾 Pokémon mini-mindset</h3>
+              <p class="desc" style="margin:0;font-size:13px;">Winner mindset: calm, clever, slightly dramatic (in a funny way).</p>
+              <div class="progressWrap">
+                <div class="bar" aria-hidden="true"><div class="fill" id="pokeFill"></div></div>
+                <span class="tag" id="pokeTag">Mode: Trainer</span>
+              </div>
+              <div class="out" id="pokeOut" style="margin-top:10px;">Tap for a tiny Pokémon line.</div>
+              <div class="btnrow">
+                <button id="btnPoke">Poké pep talk</button>
+                <button id="btnPokeReset">Reset</button>
+              </div>
+            </div>
+
+            <div class="mini">
+              <h3>🎨 Artist corner (because you’re actually good)</h3>
+              <div class="out" id="artOut">Tap for an art/card idea.</div>
+              <div class="btnrow">
+                <button id="btnArt">Art prompt</button>
+                <button id="btnCard">Card idea</button>
+                <button id="btnSquish">Squishmallow prompt</button>
+              </div>
+              <div class="tiny" style="margin-top:8px;">Your drawings + cards make people feel seen. That’s real.</div>
+            </div>
+
+            <div class="mini">
+              <h3>🍜 Ramen + popsicle corner</h3>
+              <div class="out" id="snackOut">Tap for snack vibes.</div>
+              <div class="btnrow">
+                <button id="btnRamen">Ramen wisdom</button>
+                <button id="btnPop">Popsicle rating</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT -->
+      <aside class="card">
+        <div class="inner">
+          <h2>A note for Pookay Vookay 💛</h2>
+          <div class="out" id="noteOut"></div>
+
+          <div class="divider"></div>
+
+          <div class="mini">
+            <h3>👩‍👧 Abi + Mom</h3>
+            <p class="desc" style="margin:0;font-size:13px;">Tap for a small idea (simple is fine).</p>
+            <div class="out" id="momOut" style="margin-top:10px;">Tap for a “mom + abi” idea.</div>
+            <div class="btnrow">
+              <button class="primary" id="btnMom">Give us an idea</button>
+              <button id="btnMomLine">Sweet line</button>
+            </div>
+          </div>
+
+          <div class="mini" style="margin-top:12px;">
+            <h3>👧👦 Abi + Arjun Switch time</h3>
+            <p class="desc" style="margin:0;font-size:13px;">Tap for a plan (Pokémon + Switch).</p>
+            <div class="out" id="arjunOut" style="margin-top:10px;">Tap for a game plan.</div>
+            <div class="btnrow">
+              <button class="primary" id="btnArjun">Switch plan</button>
+              <button id="btnArjunChallenge">Challenge</button>
+            </div>
+          </div>
+
+          <div class="mini" style="margin-top:12px;">
+            <h3>🏈 Football with Dad</h3>
+            <div class="out" id="footballOut">Tap for a funny “game day” note.</div>
+            <div class="btnrow">
+              <button id="btnFootball">Game day mode</button>
+            </div>
+          </div>
+
+          <div class="mini" style="margin-top:12px;">
+            <h3>🎓 Graduation album energy</h3>
+            <div class="out" id="gradOut">Tap for a calm confidence reminder.</div>
+            <div class="btnrow">
+              <button class="primary" id="btnGrad">Give me a line</button>
+              <button id="btnDecember">December energy</button>
+            </div>
+          </div>
+
+          <div class="mini" style="margin-top:12px;">
+            <h3>⚡ Johnny & Dukey moment</h3>
+            <div class="out" id="johnnyOut">Tap for a Johnny + Dukey moment.</div>
+            <div class="btnrow">
+              <button id="btnJohnny">Activate</button>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Made by your sister (saved as <strong>McClapYoHandz</strong>) with maximum love 💛
+    </footer>
+  </div>
+
+  <script>
+    // Time pills
+    function updateTimePills(){
+      const now = new Date();
+      const opts = { weekday:"long", year:"numeric", month:"long", day:"numeric" };
+      document.getElementById("todayPill").textContent = now.toLocaleDateString(undefined, opts);
+      document.getElementById("timePill").textContent =
+        "Your local time: " + now.toLocaleTimeString(undefined, {hour:"2-digit", minute:"2-digit"});
+    }
+    updateTimePills();
+    setInterval(updateTimePills, 15000);
+
+    function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+
+    // Note
+    const NOTE_TEXT =
+`Abi —
+
+Hi Pookay Vookay. I made this because you’re genuinely one of my favorite people.
+
+You’re funny AND smart (dangerous combo).
+You’re also really empathetic — like you notice people’s feelings and you actually care.
+And your drawings + the cards you make for people? That’s literally you being kind in art form.
+
+If you’re having an annoying day:
+1) You’re allowed to feel annoyed.
+2) You’re still cool.
+3) We can watch Psych later and quote it until we forget why we were annoyed.
+
+Love you lots.
+— McClapYoHandz 💛`;
+    document.getElementById("noteOut").textContent = NOTE_TEXT;
+
+    // Quote buttons
+    const boosts = [
+      {t:"You’re smart AND funny. That combo is basically a superpower.", m:"Power duo"},
+      {t:"You being empathetic is not ‘too much’ — it’s literally a strength.", m:"True"},
+      {t:"If today feels messy, you don’t need to fix everything at once.", m:"One step"},
+      {t:"Reminder: you’re doing better than you think.", m:"No notes"},
+      {t:"Pookay Vookay does not lose. She just gains XP.", m:"Game logic"},
+    ];
+
+    const hype = [
+      {t:"Your art is actually good. Like ‘people would keep it forever’ good.", m:"Artist alert"},
+      {t:"You make people feel cared about. That’s rare.", m:"Big compliment"},
+      {t:"You’re funny without even trying — unfair advantage.", m:"Elite"},
+      {t:"If someone underestimates you, that’s their issue.", m:"Facts"},
+    ];
+
+    const cozy = [
+      {t:"Cozy mode: hoodie on, ramen soon, and you get to exist peacefully.", m:"A+ plan"},
+      {t:"Quiet days are allowed. Even the coolest people rest.", m:"True"},
+      {t:"Today’s task: be comfy. Everything else is optional.", m:"Minimal requirements"},
+    ];
+
+    const psychMoments = [
+      {t:"Psych rule: snacks + jokes fix 80% of life.", m:"Science-ish"},
+      {t:"We watch Psych and pretend we’re detectives. Healing.", m:"Approved"},
+      {t:"If we were in Psych, you’d solve the case and roast me after.", m:"Accurate"},
+      {t:"When in doubt: pineapple energy.", m:"You know what I mean"},
+    ];
+
+    function setQuote(item){
+      document.getElementById("quoteText").textContent = item.t;
+      document.getElementById("quoteMeta").textContent = item.m || "";
+    }
+
+    document.getElementById("btnBoost").addEventListener("click", ()=> setQuote(pick(boosts)));
+    document.getElementById("btnHype").addEventListener("click", ()=> setQuote(pick(hype)));
+    document.getElementById("btnCozy").addEventListener("click", ()=> setQuote(pick(cozy)));
+    document.getElementById("btnPsych").addEventListener("click", ()=> setQuote(pick(psychMoments)));
+
+    // Crossy Road
+    const crossyChallenges = [
+      "Crossy Road challenge: 3 tries. Highest score wins. Loser owes the other a popsicle (emotionally).",
+      "Challenge: beat your score WITHOUT getting mad. (Hard mode.)",
+      "Challenge: narrate one round like it’s a football game.",
+      "Challenge: every time you lose, say one nice thing about yourself.",
+      "Challenge: ‘Pookay Vookay mode’ — you can’t panic. Only vibes."
+    ];
+    document.getElementById("btnCrossy").addEventListener("click", ()=>{
+      document.getElementById("crossyOut").textContent = pick(crossyChallenges);
+    });
+    document.getElementById("btnRematch").addEventListener("click", ()=>{
+      document.getElementById("crossyOut").textContent = "REMATCH ACCEPTED. Winner gets bragging rights for 24 hours.";
+    });
+
+    // Switch suggestions (real games)
+    const switchSuggestions = [
+      "Cozy + cute: Kirby and the Forgotten Land",
+      "Classic comfort: Mario Kart 8 Deluxe",
+      "Cozy sim: Animal Crossing: New Horizons",
+      "Bright platforming: Super Mario Bros. Wonder",
+      "Pokémon adventure: Pokémon Legends: Arceus",
+      "Quick chaos: Super Smash Bros. Ultimate",
+      "Cozy farming: Stardew Valley",
+      "Party energy: Mario Party Superstars"
+    ];
+    const switchVibeNotes = [
+      "Pick the one that matches your energy — not the one you ‘should’ play.",
+      "10 minutes counts. You don’t have to commit to a whole session.",
+      "Handheld + blanket is a valid life choice."
+    ];
+    const acNostalgia = [
+      "Animal Crossing nostalgia: imagine your island… but with a ramen shop and a popsicle cart.",
+      "AC energy: decorate one tiny area and call it a win.",
+      "AC memory: slow days were kind of the point. Bring that back for 10 minutes."
+    ];
+
+    document.getElementById("btnSwitch").addEventListener("click", ()=>{
+      document.getElementById("switchOut").textContent = `${pick(switchSuggestions)}\n\nAlso: ${pick(switchVibeNotes)}`;
+    });
+    document.getElementById("btnAC").addEventListener("click", ()=>{
+      document.getElementById("switchOut").textContent = pick(acNostalgia);
+    });
+
+    // Pokémon pep
+    const pokeLines = [
+      {t:"Trainer reminder: you don’t have to win every battle to be strong.", tag:"Trainer"},
+      {t:"Sometimes the best move is a heal. (Yes, in real life too.)", tag:"Potion"},
+      {t:"If your day is a wild encounter… run away and eat ramen.", tag:"Escape Rope"},
+      {t:"You’re not behind. You’re leveling up.", tag:"XP"},
+      {t:"Legendary behavior: be kind to yourself even when you’re annoyed.", tag:"Legendary"},
+    ];
+    let pokePct = 42;
+    function setPoke(tag, pct, line){
+      document.getElementById("pokeTag").textContent = "Mode: " + tag;
+      document.getElementById("pokeFill").style.width = pct + "%";
+      document.getElementById("pokeOut").textContent = line;
+    }
+    document.getElementById("btnPoke").addEventListener("click", ()=>{
+      const m = pick(pokeLines);
+      pokePct = Math.min(90, pokePct + (8 + Math.floor(Math.random()*10)));
+      setPoke(m.tag, pokePct, m.t);
+    });
+    document.getElementById("btnPokeReset").addEventListener("click", ()=>{
+      pokePct = 42;
+      setPoke("Trainer", pokePct, "Reset complete. Hydrate. Then continue being iconic.");
+    });
+
+    // Art prompts + card ideas
+    const artPrompts = [
+      "Draw a Psych doodle: pineapple + magnifying glass + your style.",
+      "Draw a Pokémon as a squishmallow. Too cozy to battle.",
+      "Turn your mood into a color palette and doodle with it.",
+      "Design a Crossy Road character that is literally ‘Pookay Vookay.’",
+      "Draw a ramen bowl like it has a personality."
+    ];
+    const cardIdeas = [
+      "Card idea: tiny drawing + one sentence that’s actually sweet.",
+      "Mini comic strip card (3 panels). People LOVE that.",
+      "‘Thinking of you’ card but make it funny.",
+      "Good luck card with a tiny ‘level up’ vibe."
+    ];
+    const squishPrompts = [
+      "Invent a new Squishmallow: name, color, hobby, one silly fear.",
+      "Draw a Squishmallow holding a ramen cup.",
+      "Draw a Squishmallow football fan with a foam finger.",
+      "Design a Squishmallow that looks like a popsicle (cute, not scary)."
+    ];
+    document.getElementById("btnArt").addEventListener("click", ()=>{
+      document.getElementById("artOut").textContent = pick(artPrompts);
+    });
+    document.getElementById("btnCard").addEventListener("click", ()=>{
+      document.getElementById("artOut").textContent = pick(cardIdeas);
+    });
+    document.getElementById("btnSquish").addEventListener("click", ()=>{
+      document.getElementById("artOut").textContent = pick(squishPrompts);
+    });
+
+    // Snacks
+    const ramenWisdom = [
+      "Ramen wisdom: broth carries noodles. You don’t have to carry everything alone.",
+      "Ramen rule: small upgrades matter (egg, corn, spice).",
+      "If the day is mid, ramen is the correct response. This is science.",
+      "Ramen moment: slurp, breathe, relax. That’s the whole vibe."
+    ];
+    const popsicleRatings = [
+      "Popsicle rating: 10/10 if it doesn’t drip on your shirt.",
+      "Popsicle review: cold, sweet, dramatic. Tiny dessert with a plot twist.",
+      "Popsicle logic: colorful = tastes better. Don’t argue with me."
+    ];
+    document.getElementById("btnRamen").addEventListener("click", ()=>{
+      document.getElementById("snackOut").textContent = pick(ramenWisdom);
+    });
+    document.getElementById("btnPop").addEventListener("click", ()=>{
+      document.getElementById("snackOut").textContent = pick(popsicleRatings);
+    });
+
+    // Mom ideas
+    const momIdeas = [
+      "Snack plate together + rate everything like food critics.",
+      "Tiny walk + talk about nothing important.",
+      "Card-making: you sketch, Mom picks colors, then both sign it.",
+      "Tea/water + sit together for 10 minutes. That counts."
+    ];
+    const momLines = [
+      "You and Mom together = calm + funny + safe.",
+      "Time together doesn’t have to be fancy to be special.",
+      "You two are really good at making each other feel better."
+    ];
+    document.getElementById("btnMom").addEventListener("click", ()=>{
+      document.getElementById("momOut").textContent = pick(momIdeas);
+    });
+    document.getElementById("btnMomLine").addEventListener("click", ()=>{
+      document.getElementById("momOut").textContent = pick(momLines);
+    });
+
+    // Arjun plans
+    const arjunPlans = [
+      "Two Pokémon matches, then snack break, then one rematch.",
+      "Winner picks the next game, loser picks snacks. Fair.",
+      "Co-op round first, then battle. Peaceful order.",
+      "Best of 3, but match #3 is ‘funny moves only.’"
+    ];
+    const arjunChallenges = [
+      "Challenge: both pick the silliest team name and commit to it.",
+      "Challenge: only compliments for one match.",
+      "Challenge: ‘no panic clicking’ — breathe before your turn.",
+      "Challenge: loser has to say ‘gg’ like they mean it."
+    ];
+    document.getElementById("btnArjun").addEventListener("click", ()=>{
+      document.getElementById("arjunOut").textContent = pick(arjunPlans);
+    });
+    document.getElementById("btnArjunChallenge").addEventListener("click", ()=>{
+      document.getElementById("arjunOut").textContent = pick(arjunChallenges);
+    });
+
+    // Football
+    const footballNotes = [
+      "Game day rule: snacks first, opinions second.",
+      "If the game is stressful, say ‘defense needs to lock in’ and you’ll sound correct.",
+      "Football with Dad is elite bonding. That’s the real win.",
+      "Ref bad? Say ‘that call was questionable’ and sip your drink calmly."
+    ];
+    document.getElementById("btnFootball").addEventListener("click", ()=>{
+      document.getElementById("footballOut").textContent = pick(footballNotes);
+    });
+
+    // Graduation energy (no “main character”)
+    const gradLines = [
+      "You don’t need everything figured out. Just keep showing up.",
+      "Quiet confidence > loud confidence. You’ve always had that.",
+      "You’re doing better than you think, even if today is weird.",
+      "Progress doesn’t have to look impressive to be real."
+    ];
+    const decemberEnergy = [
+      "December energy: calm outside, strong inside.",
+      "Winter-born means you’re built for hard days.",
+      "You’re allowed to be cozy AND unstoppable."
+    ];
+    document.getElementById("btnGrad").addEventListener("click", ()=>{
+      document.getElementById("gradOut").textContent = pick(gradLines);
+    });
+    document.getElementById("btnDecember").addEventListener("click", ()=>{
+      document.getElementById("gradOut").textContent = pick(decemberEnergy);
+    });
+
+    // Johnny + Dukey
+    const johnny = [
+      "Johnny & Dukey rule: do something dumb together and laugh immediately.",
+      "Dukey energy: loyal, chaotic, and somehow always correct.",
+      "If Johnny survives a science disaster, you can survive today.",
+      "Plot twist: you’re allowed to be silly for two minutes."
+    ];
+    document.getElementById("btnJohnny").addEventListener("click", ()=>{
+      document.getElementById("johnnyOut").textContent = pick(johnny);
+    });
+  </script>
+</body>
+</html>
